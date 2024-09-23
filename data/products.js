@@ -80,6 +80,20 @@ class Clothing extends Product {
 // console.log(tshirt);
 // console.log(tshirt.getPrice());
 // console.log(tshirt.getStarsUrl());
+/*
+const date = new Date();
+console.log(date);
+console.log(date.toLocaleTimeString());
+*/
+/*
+console.log(this);
+
+function logThis() {
+  console.log(this);
+}
+logThis();
+logThis.call('Hello')
+*/
 
 export const products = [
   {
