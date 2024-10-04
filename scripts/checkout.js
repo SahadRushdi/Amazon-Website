@@ -5,7 +5,23 @@ import { loadCart } from '../data/cart.js';
 // import '../data/cart-class.js';
 // import '../data/backend-practice.js';
 
-// Using Promises 
+// Asyns makes a function return a promise
+async function loadPage() {
+    await loadProductsFetch();
+
+    const value = await new Promise((resolve) => {
+        loadCart(() => {
+            resolve();
+        });
+    });
+
+    renderOrderSummary();
+    renderPaymentSummary();
+}
+loadPage();
+
+// ---------------Using Promises--------------- 
+/*
 Promise.all([
     loadProductsFetch(),
     new Promise((resolve) => {
@@ -18,6 +34,7 @@ Promise.all([
     renderOrderSummary();
     renderPaymentSummary();
 });
+*/
 
 /*
 new Promise((resolve) => {
