@@ -12,6 +12,8 @@ async function loadPage() {
 
         await loadProductsFetch();
 
+        // Try catch is used for errors outside of our control
+
         const value = await new Promise((resolve, reject) => {
             // throw 'error2';  //Used to create errors Syncronously [Right away!]
             loadCart(() => {
